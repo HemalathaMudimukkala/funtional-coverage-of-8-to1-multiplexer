@@ -1,1 +1,6 @@
 # funtional-coverage-of-8-to1-multiplexer
+In this project, I performed functional coverage analysis of an 8-to-1 multiplexer (Mux) using Verilog. The Mux design selects one of the eight input signals (a, b, c, d, e, f, g, h) based on a 3-bit selection signal (sel) and outputs it as y. The testbench developed for this design systematically validates the functionality of the Mux by generating random values for all inputs and the selection signal using $urandom().
+
+To ensure thorough testing, I implemented a coverage group (cvr_mux) within the testbench. This coverage group monitors the individual states of each input and the output, capturing all possible combinations of sel and the corresponding input being selected. The testbench also includes cross-coverage points, which track interactions between the selection signal and each individual input. By using ignore_bins, I optimized the coverage to ignore invalid scenarios, ensuring only valid input-selection combinations were monitored.
+
+Through this approach, I achieved comprehensive functional coverage, verifying that the Mux correctly handles all possible input combinations. This project demonstrates my ability to apply advanced coverage-driven verification techniques in Verilog, ensuring that digital designs are thoroughly tested for correctness and robustness.
